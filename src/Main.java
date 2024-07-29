@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     // Static list of users, acting as a database
     private static ArrayList<User> users = new ArrayList<>();

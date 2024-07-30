@@ -89,7 +89,8 @@ public class ToDoList {
         System.out.print("Enter the description of the item: ");
         Scanner scanner = new Scanner(System.in);
         String description = scanner.nextLine();
-        // TODO Now: Call the add(ToDoItem item) method of the user's to-do items list to add a new item
+        user.getToDoItems().add(new ToDoItem(description));
+        System.out.println("Item added successfully.");
     }
 
     /**
@@ -100,7 +101,12 @@ public class ToDoList {
         System.out.print("Enter the number of the item to mark as done: ");
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
-        // TODO Now: Set the isDone field of the item at the specified index to true
+        if (itemNumber >= 0 && itemNumber < user.getToDoItems().size()) {
+            user.getToDoItems().get(itemNumber).setDone(true);
+            System.out.println("Item marked as done.");
+        } else {
+            System.out.println("Invalid item number.");
+        }
     }
 
     /**
@@ -111,7 +117,12 @@ public class ToDoList {
         System.out.print("Enter the number of the item to mark as undone: ");
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
-        // TODO Now: Set the isDone field of the item at the specified index to false
+        if (itemNumber >= 0 && itemNumber < user.getToDoItems().size()) {
+            user.getToDoItems().get(itemNumber).setDone(false);
+            System.out.println("Item marked as undone.");
+        } else {
+            System.out.println("Invalid item number.");
+        }
     }
 
     /**
@@ -122,7 +133,12 @@ public class ToDoList {
         System.out.print("Enter the number of the item to delete: ");
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
-        // TODO Now: Remove the item at the specified index from the user's to-do items list
+        if (itemNumber >= 0 && itemNumber < user.getToDoItems().size()) {
+            user.getToDoItems().remove(itemNumber);
+            System.out.println("Item deleted successfully.");
+        } else {
+            System.out.println("Invalid item number.");
+        }
     }
 
     /**

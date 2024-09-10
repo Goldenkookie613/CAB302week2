@@ -1,5 +1,8 @@
 package com.example.addressbook.model;
 
+/**
+ * class for conbtact objects
+ */
 public class Contact {
     private int id;
     private String firstName;

@@ -1,5 +1,6 @@
-package com.example.addressbook;
+package com.example.addressbook.controller;
 
+import com.example.addressbook.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -54,4 +55,5 @@ Elementum nibh tellus molestie nunc non blandit massa.""");
         Stage stage = (Stage) nextButton.getScene().getWindow();
         stage.close();
     }
+
 }
